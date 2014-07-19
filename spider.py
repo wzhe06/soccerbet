@@ -8,6 +8,7 @@ __author__ = 'ggstar'
 import urllib
 import re
 import lottery
+import datetime
 
 
 def url_get(url_str, decode):
@@ -87,6 +88,13 @@ def crawl_lottery_items(match_id):
 
         lottery_items.append(lottery_item)
 
+        return_pattern = re.compile(r'</tr>\s*<tr>\s*<td row="1">(.*?)%</td>')
+
+        return_rate_match = return_pattern.search(one_item)
+
+        if return_rate_match:
+            lottery_item.back_ratio = float(return_rate_match.group(1))
+
     return lottery_items
 
 
@@ -98,7 +106,14 @@ def get_match(match_id):
 
 
 def crawl_match_list():
-    url_str = "http://trade.500.com/jczq/dgp.php"
+
+    today = datetime.datetime.now()
+    return crawl_match_list_by_date(str(today.year) + "-" + str(today.month) + "-" + str(today.day))
+
+
+def crawl_match_list_by_date(date):
+
+    url_str = "http://trade.500.com/jczq/dgp.php?date="+ date +"&playtype=both"
     content = url_get(url_str, "gb2312")
     match_id_r = re.compile(r'http://odds.500.com/fenxi/ouzhi-(\d+).shtml')
 

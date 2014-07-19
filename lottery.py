@@ -18,6 +18,7 @@ class LotteryItem(object):
         self.cd_odds = float(0)
         self.cl_odds = float(0)
         self.back_ratio = 0
+        self.count = 1
 
     def display(self):
         print "%s\t%s\t%s\t%s\t%s\t" % (self.id, self.company, self.cw_odds, self.cd_odds, self.cl_odds)
