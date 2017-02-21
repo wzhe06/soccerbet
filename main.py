@@ -13,16 +13,6 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-
-def test():
-    args = sys.argv
-    if len(args) == 1:
-        print 'Hello, world!'
-    elif len(args) == 2:
-        print 'Hello, %s!' % args[1]
-    else:
-        print 'Too many arguments!'
-
 m_match_ids = spider.crawl_match_list()
 
 for m_match_id in m_match_ids:
