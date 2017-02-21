@@ -5,21 +5,22 @@
 
 __author__ = 'ggstar'
 
-import urllib
 import re
 import lottery
 import datetime
+import requests
 
 
 def url_get(url_str, decode):
-
-    f = urllib.urlopen(url_str)
-    return f.read().decode(decode)
+    r = requests.get(url_str)
+    return r.content.decode(decode, "ignore").encode('utf-8')
 
 
 def crawl_match_info(match_id):
     url_str = "http://odds.500.com/fenxi/ouzhi-" + str(match_id) + ".shtml"
+    print url_str
     content = url_get(url_str, "gb2312")
+    #print content
 
     match = lottery.LotteryMatch("match_name", "match_link",  "match_time", "host_team", "guest_team", "item_arr")
 
