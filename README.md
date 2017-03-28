@@ -17,10 +17,10 @@
 
 		642471                                              //比赛代号
 		http://odds.500.com/fenxi/ouzhi-642471.shtml        //比赛信息页面
-		match name:	17亚冠杯分组赛                            //比赛名称
+		match name:	17亚冠杯分组赛                        //比赛名称
 		match members:	西悉尼漫步者 VS 浦和红钻               //交战双方
-		match time:	比赛时间2017-02-21 16:00                 //比赛时间
+		match time:	比赛时间2017-02-21 16:00             //比赛时间
 		profit:	109.88                                      //按照下面的比例购买彩票，能够获得的收益109.88%，即盈利9.88%
-		win:	168 Pinnbet	4.2	27                          //从Pinnbet下注 27%的资金押胜 (其中168是公司id，Pinnbet是公司名称，4.2是赔率，27是押27%的资金)
-		draw:	168 Pinnbet	3.5	32                          //从Pinnbet下注 32%的资金押平
+		win:	168 Pinnbet	4.2	27                  //从Pinnbet下注 27%的资金押胜 (其中168是公司id，Pinnbet是公司名称，4.2是赔率，27是押27%的资金)
+		draw:	168 Pinnbet	3.5	32                  //从Pinnbet下注 32%的资金押平
 		lose:	26 Leon	2.68	41                          //从Leon下注 41%的资金押负
